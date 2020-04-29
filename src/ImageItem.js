@@ -13,6 +13,7 @@ export default class Creature extends Component {
                 <h2>{this.props.bovid.title}</h2>
                 <p className="creature-description">{this.props.bovid.description}</p>
                 <p className="creature-keyword">{this.props.bovid.keyword}</p>
+                <p className="creature-horns">{this.props.bovid.horns}</p>
             </div>
         </li>
     }
