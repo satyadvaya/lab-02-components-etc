@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import Creature from "./Creature.js";
+// import Creature from "./ImageItem.js";
 // import creatureData from "./data.js";
 import "./App.css";
 
