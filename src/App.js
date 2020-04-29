@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Creature from "./Creature.js";
-import creatureData from "./data.js";
+// import Creature from "./Creature.js";
+// import creatureData from "./data.js";
 import "./App.css";
 
-const creature = {
-    url: "blah",
-    title: "blah",
-    description: "blah",
-    keyword: "blah",
-    horns: "blah"
-}
+// const creature = {
+//     url: "blah",
+//     title: "blah",
+//     description: "blah",
+//     keyword: "blah",
+//     horns: "blah"
+// }
 
 export default class App extends Component {
   state = { selected: null };
