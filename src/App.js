@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-// import Creature from "./Creature.js";
-// import creatureData from "./data.js";
-import "./App.css";
+import creatureData from './data.js';
+import Creature from './ImageItem.js';
+import './App.css';
 
-// const creature = {
-//     url: "blah",
-//     title: "blah",
-//     description: "blah",
-//     keyword: "blah",
-//     horns: "blah"
-// }
-
-export default class App extends Component {
+class App extends Component {
   state = { selected: null };
 
   handleChange = (e) => {
@@ -22,7 +14,7 @@ export default class App extends Component {
     return (
       <div>
         <header>
-          <img src="logo192.png" alt="Alchemy Code Lab Logo" />
+          <img src="logo192.png" alt="React Logo" />
           <h1>Horned Creatures</h1>
         </header>
 
@@ -49,8 +41,27 @@ export default class App extends Component {
           </section>
 
 
-         </main>
-        </div>
+          <section className="list-section">
+            <ul className="creatures">
+              {
+                creatureData
+                  .filter(creature => {
+                    // if there is nothing selected, show ALL CREATURES
+                    if (!this.state.selected) return true;
+            
+                    // otherwise only show the creature if the creature type is the same as the selected creature type
+                    return creature.keyword === this.state.selected;
+                  })
+                  .map(animal => {
+                  console.log(animal)
+                  return <Creature bovid={animal} />
+                  })        
+              }
+            </ul>
+          </section>
+        </main>
+      </div>
     );
-    }
+  }
 }
+export default App;
